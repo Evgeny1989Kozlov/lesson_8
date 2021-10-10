@@ -1,0 +1,893 @@
+/* ! Подключение шрифтов */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+@font-face {
+   font-family: "Helvetica Neue";
+   src: url("../fonts/HelveticaNeue-CondensedBlack.woff2") format("woff2"),
+      url("../fonts/HelveticaNeue-CondensedBlack.woff") format("woff");
+   font-weight: 900;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "Helvetica Neue";
+   src: url("../fonts/HelveticaNeue.woff2") format("woff2"), url("../fonts/HelveticaNeue.woff") format("woff");
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: "HelveticaNeueCyr";
+   src: url("HelveticaNeueCyr-Bold.woff2") format("woff2"), url("HelveticaNeueCyr-Bold.woff") format("woff");
+   font-weight: bold;
+   font-style: normal;
+   font-display: swap;
+}
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+li {
+   list-style: none;
+}
+a,
+a:visited {
+   text-decoration: none;
+}
+a:hover {
+   text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+img {
+   vertical-align: top;
+}
+html,
+body {
+   height: 100%;
+}
+html {
+   font-size: 16px; /* по умолчанию */
+}
+body {
+   line-height: 1;
+   font-family: "Cormorant Garamond", serif;
+   font-weight: 600;
+   height: 100%;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+}
+
+.cont {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 10px;
+}
+
+/* *общие классы */
+
+.wrapper > div:not(:last-child) {
+   margin-bottom: 50px;
+}
+
+h1 {
+   font-size: 72px;
+   color: rgba(14, 89, 151, 0.733);
+   text-shadow: 3px -5px 10px rgb(154, 43, 182);
+   margin-bottom: 20px;
+}
+
+h2 {
+   display: inline-block;
+   padding: 5px;
+   font-size: 50px;
+   color: rgba(36, 66, 60, 0.623);
+   /* max-width: 240px; */
+   box-shadow: 6px 9px 4px rgba(52, 153, 221, 0.651);
+   margin-bottom: 25px;
+}
+.spspi h2 {
+   box-shadow: 6px 9px 4px rgb(148, 221, 52);
+   padding: 10px 10px 20px;
+   background: rgba(136, 102, 68, 0.377);
+}
+h2.nadhealth {
+   color: rgb(29, 53, 51);
+   text-transform: capitalize;
+   background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.65) 2%,
+      rgba(0, 0, 0, 0.65) 5%,
+      rgba(0, 0, 0, 0) 58%,
+      rgba(0, 0, 0, 0) 100%
+   );
+   display: inline-block;
+   box-shadow: none;
+}
+h2.nadhealth span {
+   background: none;
+}
+
+h2 span {
+   display: inline-block;
+   color: indianred;
+   background: radial-gradient(
+      ellipse at center,
+      rgba(245, 246, 246, 1) 0%,
+      rgba(219, 220, 226, 1) 21%,
+      rgba(184, 186, 198, 1) 49%,
+      rgba(221, 223, 227, 1) 80%,
+      rgba(245, 246, 246, 1) 100%
+   );
+   border-radius: 20px;
+}
+
+/* !-----------------blhover---------------- */
+
+.wrapper {
+   padding: 20px;
+}
+
+.hoveri {
+   margin-bottom: 80px;
+}
+
+.hoveri *:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+.blhov a {
+   display: inline-block;
+   color: rgb(16, 202, 156);
+   font-size: 20px;
+   border: 2px solid rgb(81, 83, 172);
+   padding: 8px 20px;
+   border-radius: 15px;
+   background: beige;
+   box-shadow: 0px 5px 2px rgb(81, 83, 172);
+}
+
+.blhover1 a:hover {
+   opacity: 1;
+   /* border-radius: 9px; */
+   background: rgba(245, 245, 220, 0.411);
+   box-shadow: 0px 1px 2px rgba(81, 83, 172, 0.432);
+   margin-top: 4px;
+}
+
+.blhover2 a {
+   opacity: 0.2;
+   box-shadow: 0px -5px 2px rgb(81, 83, 172);
+}
+
+.blhover2 a:hover {
+   opacity: 1;
+   margin-top: -4px;
+   box-shadow: 0px 1px 2px rgba(81, 83, 172, 0.432);
+}
+
+.blhover3,
+.blhover4 {
+   padding: 10px;
+}
+.blhover3 a {
+   display: inline-block;
+   opacity: 0.3;
+   visibility: hidden;
+}
+
+.blhover3:hover {
+   background: lightcoral;
+}
+.blhover3:hover a,
+.blhover4:hover a {
+   opacity: 0.5;
+   visibility: visible; /* margin-top: 4px;
+   box-shadow: 0px 1px 2px rgba(81, 83, 172, 0.432); */
+   color: rgb(181, 0, 252);
+   background: rgb(128, 208, 240);
+}
+
+.blhover3 a:hover,
+.blhover4 a:hover {
+   text-decoration: underline;
+   color: rgb(0, 80, 252);
+   /* margin-top: 4px;
+   box-shadow: 0px 1px 2px rgba(81, 83, 172, 0.432); */
+   background: rgb(240, 169, 128);
+}
+
+.blhover4:hover {
+   background: rgb(151, 202, 121);
+}
+
+.blhover4 a span {
+   display: inline-block;
+   visibility: hidden;
+   padding: 5px;
+}
+
+.blhover4:hover a span {
+   color: rgb(20, 173, 122);
+   text-decoration: line-through;
+   visibility: visible;
+}
+
+.blhover4 a:hover span {
+   color: maroon;
+   visibility: visible;
+   border: 1.5px solid #767;
+   box-shadow: inset 3px -3px 2px rgb(187, 166, 99), inset -3px 3px 2px rgb(52, 90, 100);
+}
+
+.blhover4 a span:hover {
+   visibility: hidden;
+   box-shadow: 0px 1px 2px rgba(81, 83, 172, 0.432);
+   margin-top: 4px;
+}
+
+.blhover4 a:hover {
+   box-shadow: 0px 1px 2px rgba(81, 83, 172, 0.432);
+   margin-top: 4px;
+}
+
+/* .hoveri:hover .hoveri::nth-child(1) {
+   background-color: maroon;
+} */
+
+.blhov2 a {
+   display: inline-block;
+   color: rgb(90, 138, 228);
+   font-size: 20px;
+   border: 2px solid rgb(81, 83, 172);
+   padding: 24px 24px;
+   border-radius: 14% 86% 10% 90% / 27% 32% 68% 73%;
+   background: rgb(214, 214, 48);
+   box-shadow: 0px 5px 2px rgb(81, 83, 172);
+}
+
+.blhov2 {
+   background: burlywood;
+   padding: 110px 30px;
+   width: 300px;
+   border-radius: 95% 5% 93% 7% / 30% 24% 76% 70%;
+   border: 3px dashed #741;
+}
+
+.blhov2:hover {
+   border-radius: 14% 86% 10% 90% / 27% 32% 68% 73%;
+   border: 3px dotted rgb(153, 202, 19);
+}
+
+/* .blhov2:hover a {
+   border-radius: 95% 5% 93% 7% / 30% 24% 76% 70%;
+   border: 3px doted rgb(153, 202, 19);
+   margin-left: 120px;
+   opacity: 0.5;
+} */
+
+/* ? разобраться с hover */
+/* #targ {
+}
+
+#targ:target {
+   display: none;
+} */
+
+.wrapper .hoveri:hover .bhover2 {
+   margin: 0 auto;
+   border-radius: 7% 93% 3% 97% / 96% 6% 94% 4%;
+   /* padding: 80px 20px; */
+}
+
+.blhov2 a:hover {
+   display: inline-block;
+   color: rgb(90, 138, 228);
+   font-size: 20px;
+   border: none;
+   padding: 5px;
+   border-radius: 7% 93% 3% 97% / 96% 6% 94% 4%;
+   opacity: 1;
+   background: rgb(214, 214, 48);
+   box-shadow: 0px 5px 2px rgb(81, 83, 172);
+}
+/*! -----------------------visited------------------------- */
+
+body .wrapper .visited a {
+   color: rgb(230, 180, 173);
+}
+
+body .wrapper .visited a:visited {
+   color: rgb(173, 230, 199);
+   border-bottom: 1px solid #986;
+}
+
+.visited > div:not(:last-child) {
+   margin-bottom: 20px;
+}
+
+/* !-------------------focus--------------------- */
+
+.focus .blbo a {
+   display: inline-block;
+   margin-right: 30px;
+}
+.focus .blbo a:focus {
+   padding: 4px;
+   border: 5px dashed #653;
+   background: moccasin;
+   margin-top: 14px;
+   text-align: center;
+}
+
+.focus .blbo a:focus:nth-child(odd) {
+   display: block;
+   max-width: 400px;
+   margin: 0px auto 0px;
+}
+
+.focus .blbo a:focus:nth-child(even) {
+   display: block;
+   max-width: 400px;
+   margin: -344px auto 0px;
+}
+
+.focus .blbo a:focus:first-child {
+   display: inline-block;
+   max-width: 400px;
+}
+
+.focus .blbo a:focus:last-child {
+   display: block;
+   max-width: 400px;
+   margin: 0px 0px 0px auto;
+}
+
+/* !------------------------active------------------------------------- */
+
+.active .blbo:hover a {
+   box-shadow: none;
+}
+.wrapper .active .blbo a {
+   display: inline-block;
+   color: rgb(16, 202, 156);
+   font-size: 20px;
+   border: 2px solid rgb(81, 83, 172);
+   padding: 8px 20px;
+   border-radius: 15px;
+   background: beige;
+   box-shadow: 0px 5px 2px rgb(81, 83, 172);
+}
+
+.wrapper .active .blbo a:hover {
+   box-shadow: 0px 5px 2px rgb(81, 83, 172);
+}
+
+.active .blbo a:hover:nth-child(even) {
+   box-shadow: 0px 5px 2px rgb(139, 81, 172);
+}
+
+.active .blbo a:hover:nth-child(odd) {
+   box-shadow: 0px 0px 2px rgb(81, 83, 172), 0px -5px 2px rgb(81, 83, 172);
+}
+.active .blbo a:active:nth-child(even) {
+   margin: 4px;
+   box-shadow: 0px 1px 2px rgb(81, 83, 172);
+}
+
+.wrapper .active .blbo a:active:nth-child(odd) {
+   box-shadow: 0px 1px 2px rgb(81, 83, 172);
+   margin-top: 4px;
+}
+
+.active .blbo a:focus:nth-child(odd) {
+   box-shadow: 0px 1px 2px rgb(81, 83, 172), 0px 5px 2px rgb(81, 83, 172), 0px 1px 2px rgb(81, 83, 172);
+}
+
+.active .blbo a:active:nth-child(even) {
+   margin-top: 4px;
+   box-shadow: 0px 1px 2px rgb(81, 83, 172);
+   color: bisque;
+}
+
+/* !----------------------------Childi----------------------------------------- */
+
+.childi .first p:first-child {
+   color: rgb(230, 173, 173);
+   margin-bottom: 20px;
+}
+
+.childi .first *:first-of-type {
+   color: rgb(151, 119, 204);
+   margin-bottom: 15px;
+   border-radius: 50px;
+   box-shadow: 0px 00px 8px #786;
+
+   padding: 35px;
+   display: block;
+}
+
+.childi .first p:first-of-type {
+   color: rgb(230, 173, 173);
+   margin-bottom: 20px;
+   border-radius: 100px;
+   box-shadow: inset 0px 0px 18px #786;
+}
+
+.childi .first p:last-child {
+   color: rgba(44, 89, 238, 0.548);
+   background: lightgray;
+   padding: 30px;
+   border: 5px solid #876;
+}
+
+.childi .first *:last-of-type {
+   color: rgba(44, 89, 238, 0.548);
+   background: lightgray;
+   padding: 30px;
+   border: 5px solid #876;
+}
+
+.childi .first span:last-of-type {
+   color: rgba(44, 89, 238, 0.548);
+   border: none;
+   padding: 0px;
+}
+
+.childi .first span:last-of-type {
+   color: rgba(44, 89, 238, 0.548);
+   border: none;
+   padding: 0px;
+}
+
+.childi .first p:nth-child(even) {
+   color: rgba(183, 44, 238, 0.548);
+   border: none;
+   padding: 10px;
+}
+
+.childi .first p:nth-child(even) {
+   color: rgba(183, 44, 238, 0.548);
+   border: none;
+   padding: 10px;
+}
+
+.childi .first *:not(:nth-child(even)) {
+   margin-bottom: 80px;
+}
+
+.childi .first *:not(:nth-child(odd)) {
+   margin-bottom: 40px;
+}
+
+/* !----------------------------psevdo------------------------------ */
+
+.shlyapa {
+   margin-bottom: 40px;
+}
+.psevdo .shlyapa > *::first-line {
+   color: red;
+   font-size: 30px;
+   text-shadow: 2.3px 2px 2px #741;
+   text-indent: 50px;
+}
+
+.psevdo .shlyapa > *:nth-child(even):first-letter {
+   color: rgb(145, 255, 0);
+   font-size: 35px;
+   margin-right: 20px;
+   text-shadow: 2.3px 2px 2px #741;
+   text-indent: 50px;
+}
+
+.THEbest a.test {
+   display: inline-block;
+   padding: 10px 18px 12px;
+   background: #786;
+   min-height: 48px;
+   margin-bottom: 13px;
+   vertical-align: middle;
+   max-width: 230px;
+   line-height: 170%;
+   opacity: 0.5;
+}
+.THEbest:hover a.test {
+   opacity: 1;
+}
+
+.THEbest a.test:hover {
+   background: rgba(102, 119, 136, 0.301) url("../img/ico10.png") 90% 20%/ 30px no-repeat;
+   border-radius: 28px;
+   border: 3px dashed #000;
+}
+
+.THEbest a.test:active {
+   background: rgba(102, 119, 136, 0.301) url("../img/ico10.png") 97% 20%/ 30px no-repeat;
+}
+
+.THEbest a.test::before {
+   content: "";
+   display: inline-block;
+   visibility: initial;
+   text-align: center;
+   width: 50%;
+   max-width: 30px;
+   height: 30px;
+   /* margin: 4px 0px 0px 45%; */
+   background: url("../img/ico8.png") 0px 0px / cover no-repeat;
+   opacity: 0;
+}
+
+.THEbest a.test::before {
+   content: "";
+   display: inline-block;
+   text-align: center;
+   width: 50%;
+   max-width: 30px;
+   height: 30px;
+   /* margin: 4px 0px 0px 45%; */
+   background: url("../img/ico8.png") 0px 0px / cover no-repeat;
+   opacity: 0;
+}
+
+.THEbest a.test::after {
+   content: "";
+   display: block;
+
+   width: 100%;
+
+   height: 30px;
+   margin: -27px 0px 0px 0px;
+   background: #865;
+   opacity: 0;
+}
+
+.THEbest a.test:hover::before,
+.THEbest a.test:hover::after {
+   opacity: 1;
+}
+
+.wrapper .psevdo .THEbest a.test:active::before {
+   margin: 4px 22% 0px 22%;
+}
+
+.THEbest {
+   margin-bottom: 50px;
+}
+.psevdo .THEbest div:first-of-type {
+   padding: 20px 20px 10px;
+   background: khaki url("../img/ico7.png") 49% 1.8% / 15px no-repeat;
+   margin-bottom: 50px;
+}
+.psevdo .THEbest div:first-of-type div {
+   padding: 22px 25px;
+   background: rgba(143, 240, 140, 0.24);
+}
+
+.THEbest p:first-of-type {
+   margin-bottom: 130px;
+}
+
+.psevdo .THEbest div:first-of-type::before {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 5px;
+   background: rgb(166, 145, 206);
+   /* margin-top: 3px; */
+   /* margin-bottom: -43px; */
+}
+
+.THEbest div:first-of-type:hover {
+   background: khaki url("../img/ico7.png") 49% 1.8% / 15px repeat-x;
+}
+.THEbest div:first-of-type .ll::before {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 5px;
+   background: rgb(206, 145, 176);
+   margin-top: -50px;
+   margin-bottom: 50px;
+}
+
+.wrapper .psevdo .THEbest div:first-of-type .ll::after {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 60px;
+   background: rgba(34, 43, 121, 0.521);
+   /* margin-bottom: -50px; */
+   margin-top: -50px;
+}
+
+.THEbest .ll:hover::after {
+   border-top: 5px solid palevioletred;
+   border-bottom: 5px solid palevioletred;
+   border-radius: 30px;
+   overflow: hidden;
+}
+
+/* .psevdo .THEbest div:first-of-type::after {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 50px;
+   background: rgb(145, 206, 158);
+   /* margin-top: 33px; */
+/* margin-bottom: 153px; 
+} */
+
+.test2 .ui {
+   padding: 20px;
+   background: palevioletred;
+}
+.test2 .ui div {
+   padding: 25px;
+   background: rgb(131, 112, 216);
+   margin-top: -55px;
+}
+
+.test2 .ui div::before {
+   content: "Это Before 2-го уровня";
+   text-align: right;
+   display: block;
+   width: 100%;
+   height: 50px;
+   font-size: 30px;
+   background: peachpuff;
+   margin-bottom: 25px;
+}
+
+.test2 .ui::before {
+   /* content: "Это Элемент Before";
+   text-align: center; */
+   content: "Это Before 1-го уровня";
+   display: inline-block;
+   width: 100%;
+   height: 50px;
+   font-size: 50px;
+   background: rgb(9, 201, 25);
+   margin-bottom: 25px;
+}
+
+/*!  -------------------------Задачи от Сансея!---------------------------- */
+
+.ot_sanseya > div:not(:last-child) {
+   margin-bottom: 80px;
+}
+
+.ot_sanseya .spis {
+   max-width: 200px;
+}
+.ot_sanseya .spis ol li {
+   margin-bottom: 12px;
+   text-align: center;
+}
+
+.ot_sanseya .spis ol li a {
+   display: inline-block;
+   padding: 5px 12px;
+   background: rgba(119, 136, 102, 0.603);
+   font-size: 18px;
+   /* max-width: 75px;
+   width: 80%; */
+   border: 1px solid #000;
+   border-radius: 25px;
+   width: 110px;
+   text-align: center;
+}
+
+.ot_sanseya .spis ol {
+   counter-reset: item;
+}
+
+/* .ot_sanseya .spis ul li a:nth-child(2)::before {
+   margin: 0px 3px 0px -6px;
+} */
+
+.ot_sanseya .spis ol li a::before {
+   content: "";
+   display: inline-block;
+   width: 10px;
+   height: 12px;
+   border-radius: 65% 35% 90% 10% / 57% 8% 92% 43%;
+   background: rgb(148, 53, 148);
+   margin: 0px 3px 0px -5px;
+}
+
+.ot_sanseya .spis ol li a:hover::before {
+   content: "";
+   display: inline-block;
+   width: 60px;
+   height: 20px;
+   border-radius: 0;
+   background: rgba(148, 53, 148, 0.39);
+   margin: 0px -50px -5px 0px;
+   border-radius: 30px 30px 10px 10px;
+}
+.ot_sanseya .spis ol li::before {
+   content: "";
+   display: inline-block;
+   counter-increment: item;
+   content: counter(item) ")";
+   /* width: 2px;
+   height: 30px;
+   background-color: #865; */
+   color: rgb(76, 150, 199);
+   margin-bottom: 2px;
+}
+
+.ot_sanseya .spis ol li a::after {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 1px;
+
+   background: rgb(53, 137, 148);
+   margin: 4px 0px 0px 0px;
+   opacity: 0;
+}
+
+.ot_sanseya .spis ol li a:hover::after {
+   opacity: 1;
+}
+
+.ot_sanseya .spis ol li::after {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 2px;
+   opacity: 0;
+   background: rgba(75, 8, 231, 0.151);
+   margin: 2px 0px 0px 0px;
+   box-shadow: 0px 1px 20px rgb(75, 8, 231);
+}
+
+.ot_sanseya .spis ol li:hover::after {
+   opacity: 1;
+}
+
+.health .hel_cont {
+   max-width: 255px;
+
+   color: #fff;
+}
+
+.health .hel_cont .body {
+   padding: 24px 24px 60px 24px;
+   background: rgba(0, 0, 0, 0.753);
+   font-family: "Helvetica Neue";
+   font-weight: 400;
+}
+
+.health .hel_cont .body .title {
+   font-size: 22px;
+   text-transform: capitalize;
+   line-height: 118%;
+}
+
+.health .hel_cont .body .title::after {
+   content: "";
+   display: block;
+   background: #34c759;
+   width: 56px;
+   height: 2px;
+   margin: 20px 0px 24px 0px;
+}
+
+.health .hel_cont .body .txt {
+   font-size: 13px;
+   color: rgba(255, 255, 255, 0.5);
+   line-height: 138%;
+}
+
+.promise .promise_cont {
+   max-width: 1020px;
+   margin: 0 auto;
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+}
+
+.txtpart {
+   margin-bottom: 68px;
+}
+.txtpart .t {
+   margin-bottom: 33px;
+   font-weight: 700;
+   font-size: 12px;
+   line-height: 200%;
+   letter-spacing: 2.5px;
+}
+
+.txtpart .t::before {
+   content: "";
+   display: inline-block;
+   width: 17px;
+   height: 20px;
+   background: url("../img/notcol.png");
+   vertical-align: top;
+   margin: -2px 8px 0px -4.5px;
+   text-align: left;
+}
+
+.txtpart .tt {
+   font-weight: 900;
+   font-size: 36px;
+   line-height: 120%;
+}
+
+.colpart {
+   font-size: 0px;
+}
+.colpart .col {
+   display: inline-block;
+   width: 31.3%;
+
+   padding: 5px;
+   /* text-align: right; */
+   vertical-align: top;
+}
+/* .colpart .col .obramm {
+   max-width: 220px;
+   text-align: right;
+} */
+
+.colpart .col:not(:last-child) {
+   margin-right: 30px;
+}
+
+.colpart .col .title::before {
+   content: "";
+   display: inline-block;
+   width: 63px;
+   height: 63px;
+   /* background: url("../img/col1.png"); */
+   margin: 0px 20px -45px -80px;
+}
+.colpart .col1 .title::before {
+   background: url("../img/col1.png");
+}
+
+.colpart .col2 .title::before {
+   background: url("../img/col2.png");
+}
+
+.colpart .col3 .title::before {
+   background: url("../img/col3.png");
+}
+
+.colpart .col .title {
+   font-weight: 900;
+   font-size: 19px;
+   line-height: 136%;
+   max-width: 226px;
+   margin: 0px 0px 18px auto;
+}
+
+.colpart .col .ttt {
+   margin: 0px 0px 0px auto;
+   color: #4b4b4b;
+   font-size: 16px;
+   line-height: 150%;
+   letter-spacing: 0.15px;
+   max-width: 226px;
+}
